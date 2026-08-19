@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DRS2 — Monwabisi Snag Survey</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-top">
+    <p class="eyebrow">Design Studio 2 — Decay Survey</p>
+    <h1>Monwabisi Snag Register</h1>
+    <p class="dek">A field record of structural and material decay across the Monwabisi Beach complex — five sections, <span id="stat-total">—</span> logged instances.</p>
+  </div>
+
+  <div class="plot-wrap">
+    <svg id="spatial-plot" viewBox="0 0 640 220" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Map of snag locations coloured by severity"></svg>
+    <ul class="plot-legend" id="plot-legend"></ul>
+  </div>
+</header>
+
+<div class="controls" id="controls">
+  <div class="tabs" role="tablist">
+    <button class="tab active" data-view="table" role="tab" aria-selected="true">Table</button>
+    <button class="tab" data-view="gallery" role="tab" aria-selected="false">Gallery</button>
+  </div>
+
+  <div class="filters">
+    <input type="search" id="filter-search" placeholder="Search snag no. / notes…" aria-label="Search">
+
+    <select id="filter-section" aria-label="Filter by section">
+      <option value="">All sections</option>
+    </select>
+
+    <select id="filter-severity" aria-label="Filter by severity">
+      <option value="">All severities</option>
+    </select>
+
+    <select id="filter-element" aria-label="Filter by element type">
+      <option value="">All elements</option>
+    </select>
+
+    <button id="filter-reset" class="reset-btn" type="button">Reset</button>
+  </div>
+
+  <p class="result-count"><span id="result-count">355</span> shown</p>
+</div>
+
+<main>
+  <section id="view-table" class="view active">
+    <div class="table-scroll">
+      <table id="snag-table">
+        <thead>
+          <tr>
+            <th data-sort="id">Snag No.</th>
+            <th data-sort="section">Section</th>
+            <th data-sort="elementType">Element</th>
+            <th data-sort="material">Material</th>
+            <th data-sort="failure">Failure Mode</th>
+            <th data-sort="severity">Severity</th>
+            <th data-sort="progression">Progression</th>
+          </tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="view-gallery" class="view">
+    <div class="gallery-grid" id="gallery-grid"></div>
+  </section>
+</main>
+
+<div class="detail-backdrop" id="detail-backdrop">
+  <div class="detail-panel" id="detail-panel" role="dialog" aria-modal="true">
+    <button class="detail-close" id="detail-close" aria-label="Close">&times;</button>
+    <div class="detail-body" id="detail-body"></div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <p>DRS2 · Monwabisi Beach decay survey · logged in the field, August 2026</p>
+</footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>
