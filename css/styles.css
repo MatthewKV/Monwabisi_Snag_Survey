@@ -1,4 +1,5 @@
 :root {
+<<<<<<< Updated upstream
   --paper: #FFFFFF;
   --paper-dim: #FEF5EC;
   --card: #FEF5EC;
@@ -8,11 +9,22 @@
   --line-soft: #3239F1;
   --teal: #3239F1;
   --teal-dim: #666BF4;
+=======
+  --paper: #FFFFFA;
+  --paper-dim: #FFFFEB;
+  --card: #FFFFEB;
+  --ink: #211E19;
+  --ink-soft: #5C564C;
+  --line: #C9BFA3;
+  --line-soft: #DBD2B9;
+  --teal: #2C5754;
+  --teal-dim: #DCE6E3;
+>>>>>>> Stashed changes
 
-  --sev-minor: #6B8299;
-  --sev-moderate: #BE8A3D;
-  --sev-major: #B5502E;
-  --sev-catastrophic: #7A2530;
+  --sev-minor: #5435C8;
+  --sev-moderate: #76309E;
+  --sev-major: #982C74;
+  --sev-catastrophic: #BA274A;
 
   --font-display: "Space Grotesk", sans-serif;
   --font-body: "IBM Plex Sans", sans-serif;
