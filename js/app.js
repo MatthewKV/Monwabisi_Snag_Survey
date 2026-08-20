@@ -1,8 +1,8 @@
 const SEV_COLORS = {
-  Minor: '#6B8299',
-  Moderate: '#BE8A3D',
-  Major: '#B5502E',
-  Catastrophic: '#7A2530'
+  Minor: '#3239F1',
+  Moderate: '#5435C8',
+  Major: '#76309E',
+  Catastrophic: '#BA274A'
 };
 const SEV_ORDER = ['Minor', 'Moderate', 'Major', 'Catastrophic'];
 
